@@ -1,0 +1,4 @@
+# Risk service no necesita infra externa (sin Postgres ni Kafka).
+# Las reglas y la persistencia son in-memory. Este archivo se deja vacío
+# para mantener el patrón de los demás repos w2m-virtual.
+services: {}
