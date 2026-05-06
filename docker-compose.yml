@@ -1,4 +1,9 @@
-# Risk service no necesita infra externa (sin Postgres ni Kafka).
-# Las reglas y la persistencia son in-memory. Este archivo se deja vacío
-# para mantener el patrón de los demás repos w2m-virtual.
-services: {}
+# D7 Risk BFF — sin infra (reglas y persistencia in-memory).
+
+services:
+  app:
+    build: .
+    container_name: w2m-virtual-d7-risk-bff
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8086}:8086"
